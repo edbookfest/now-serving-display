@@ -1,0 +1,108 @@
+{
+  "name": "Now Serving",
+  "options": [
+    {
+      "title": "Now Serving",
+      "type": "section"
+    },
+    {
+      "title": "Now serving",
+      "name": "serving",
+      "type": "string",
+      "default": "1 - 10",
+      "ui_width": 6
+    },
+    {
+      "title": "Queue active",
+      "name": "queue_on",
+      "type": "boolean",
+      "hint": "Are we serving customers?",
+      "default": true,
+      "ui_width": 2
+    },
+    {
+      "title": "Content Configuration",
+      "type": "section"
+    },
+    {
+      "title": "Queue on text",
+      "name": "queue_on_text",
+      "type": "string",
+      "default": "Serving Customers",
+      "ui_width": 6
+    },
+    {
+      "title": "Queue off text",
+      "name": "queue_off_text",
+      "type": "string",
+      "default": "We will begin serving customers shortly",
+      "ui_width": 6
+    },
+    {
+      "type": "font",
+      "title": "Font",
+      "name": "font",
+      "ui_width": 3,
+      "default": "silkscreen.ttf"
+    },
+    {
+      "type": "color",
+      "title": "Font colour",
+      "name": "font_colour",
+      "ui_width": 3,
+      "default": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "type": "color",
+      "title": "Background colour",
+      "name": "background_colour",
+      "ui_width": 3,
+      "default": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "title": "Logo",
+      "ui_width": 3,
+      "name": "logo",
+      "type": "resource",
+      "valid": [
+        "image"
+      ],
+      "default": "empty.png"
+    },
+    {
+      "title": "Screen Configuration",
+      "type": "section"
+    },
+    {
+      "title": "Automatic resolution",
+      "ui_width": 4,
+      "name": "auto_resolution",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "title": "Manual width",
+      "ui_width": 4,
+      "name": "width",
+      "type": "integer",
+      "default": 1920
+    },
+    {
+      "title": "Manual height",
+      "ui_width": 4,
+      "name": "height",
+      "type": "integer",
+      "default": 1080
+    }
+  ]
+}

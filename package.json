@@ -1,0 +1,7 @@
+{
+  "name": "Now Serving",
+  "author": "craig@netchaos.net",
+  "desc": "Now serving displays customer queue numbers currently being served",
+  "repository": "https://github.com/edbookfest/now-serving-display.git",
+  "version": "1.1"
+}
