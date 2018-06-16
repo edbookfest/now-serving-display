@@ -57,6 +57,9 @@ function node.render()
         centerText(CONFIG.queue_on_text, 150, 250)
         centerText(serving, 400, 460)
     else
-        centerText(CONFIG.queue_off_text, 100, 350)
+        centerText(CONFIG.queue_off_text_1, 75, 300)
+        centerText(CONFIG.queue_off_text_2, 75, 400)
+        centerText(CONFIG.queue_off_text_3, 75, 500)
+        centerText(CONFIG.queue_off_text_4, 75, 600)
     end
 end
