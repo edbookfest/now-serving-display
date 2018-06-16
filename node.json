@@ -10,7 +10,7 @@
       "title": "Queue on text",
       "name": "queue_on_text",
       "type": "string",
-      "default": "Serving Customers",
+      "default": "Serving customers",
       "ui_width": 6
     },
     {
