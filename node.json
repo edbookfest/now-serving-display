@@ -1,25 +1,7 @@
 {
   "name": "Now Serving",
+  "control_ui": "control.html",
   "options": [
-    {
-      "title": "Now Serving",
-      "type": "section"
-    },
-    {
-      "title": "Now serving",
-      "name": "serving",
-      "type": "string",
-      "default": "1 - 10",
-      "ui_width": 6
-    },
-    {
-      "title": "Queue active",
-      "name": "queue_on",
-      "type": "boolean",
-      "hint": "Are we serving customers?",
-      "default": true,
-      "ui_width": 2
-    },
     {
       "title": "Content Configuration",
       "type": "section"

@@ -7,6 +7,8 @@ node.alias("now-serving")
 local font
 local logo_asset_name
 local logo
+local queue_on = true
+local serving = ''
 
 node.event("content_update", function(filename, file)
     if filename == "config.json" then
@@ -25,13 +27,13 @@ end)
 
 util.data_mapper {
     ["serving"] = function(value)
-        CONFIG.serving = value
+        serving = value
     end;
     ["queue"] = function(value)
         if value == "true" then
-            CONFIG.queue_on = true
+            queue_on = true
         else
-            CONFIG.queue_on = false
+            queue_on = false
         end
     end
 }
@@ -50,9 +52,9 @@ function node.render()
     local logo_ratio = logo_w / logo_h
     util.draw_correct(logo, WIDTH - (margin + (logo_ratio * logo_height)), margin, WIDTH - margin, margin + logo_height)
 
-    if CONFIG.queue_on then
+    if queue_on then
         centerText(CONFIG.queue_on_text, 150, 250)
-        centerText(CONFIG.serving, 400, 460)
+        centerText(serving, 400, 460)
     else
         centerText(CONFIG.queue_off_text, 100, 350)
     end
