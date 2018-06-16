@@ -7,6 +7,8 @@ node.alias("now-serving")
 local font
 local logo_asset_name
 local logo
+local queue_on = true
+local serving = ''
 
 node.event("content_update", function(filename, file)
     if filename == "config.json" then
@@ -25,21 +27,22 @@ end)
 
 util.data_mapper {
     ["serving"] = function(value)
-        CONFIG.serving = value
+        serving = value
     end;
     ["queue"] = function(value)
         if value == "true" then
-            CONFIG.queue_on = true
+            queue_on = true
         else
-            CONFIG.queue_on = false
+            queue_on = false
         end
     end
 }
 
 local function centerText(text, size, y)
-    local width = font:width(text, size)
+    local font_scale = WIDTH / 1920
+    local width = font:width(text, size * font_scale)
     local x = (WIDTH / 2) - (width / 2);
-    font:write(x, y, text, size, CONFIG.font_colour.rgba())
+    font:write(x, y * font_scale, text, size * font_scale, CONFIG.font_colour.rgba())
 end
 
 function node.render()
@@ -50,10 +53,13 @@ function node.render()
     local logo_ratio = logo_w / logo_h
     util.draw_correct(logo, WIDTH - (margin + (logo_ratio * logo_height)), margin, WIDTH - margin, margin + logo_height)
 
-    if CONFIG.queue_on then
+    if queue_on then
         centerText(CONFIG.queue_on_text, 150, 250)
-        centerText(CONFIG.serving, 400, 460)
+        centerText(serving, 400, 460)
     else
-        centerText(CONFIG.queue_off_text, 100, 350)
+        centerText(CONFIG.queue_off_text_1, 75, 300)
+        centerText(CONFIG.queue_off_text_2, 75, 400)
+        centerText(CONFIG.queue_off_text_3, 75, 500)
+        centerText(CONFIG.queue_off_text_4, 75, 600)
     end
 end

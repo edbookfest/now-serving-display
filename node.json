@@ -1,25 +1,7 @@
 {
   "name": "Now Serving",
+  "control_ui": "control.html",
   "options": [
-    {
-      "title": "Now Serving",
-      "type": "section"
-    },
-    {
-      "title": "Now serving",
-      "name": "serving",
-      "type": "string",
-      "default": "1 - 10",
-      "ui_width": 6
-    },
-    {
-      "title": "Queue active",
-      "name": "queue_on",
-      "type": "boolean",
-      "hint": "Are we serving customers?",
-      "default": true,
-      "ui_width": 2
-    },
     {
       "title": "Content Configuration",
       "type": "section"
@@ -28,15 +10,36 @@
       "title": "Queue on text",
       "name": "queue_on_text",
       "type": "string",
-      "default": "Serving Customers",
-      "ui_width": 6
+      "default": "Serving customers",
+      "ui_width": 12
     },
     {
-      "title": "Queue off text",
-      "name": "queue_off_text",
+      "title": "Queue off text line 1",
+      "name": "queue_off_text_1",
+      "type": "string",
+      "default": "",
+      "ui_width": 12
+    },
+    {
+      "title": "Queue off text line 2",
+      "name": "queue_off_text_2",
       "type": "string",
       "default": "We will begin serving customers shortly",
-      "ui_width": 6
+      "ui_width": 12
+    },
+    {
+      "title": "Queue off text line 3",
+      "name": "queue_off_text_3",
+      "type": "string",
+      "default": "",
+      "ui_width": 12
+    },
+    {
+      "title": "Queue off text line 4",
+      "name": "queue_off_text_4",
+      "type": "string",
+      "default": "",
+      "ui_width": 12
     },
     {
       "type": "font",
