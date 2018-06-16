@@ -39,9 +39,10 @@ util.data_mapper {
 }
 
 local function centerText(text, size, y)
-    local width = font:width(text, size)
+    local font_scale = WIDTH / 1920
+    local width = font:width(text, size * font_scale)
     local x = (WIDTH / 2) - (width / 2);
-    font:write(x, y, text, size, CONFIG.font_colour.rgba())
+    font:write(x, y * font_scale, text, size * font_scale, CONFIG.font_colour.rgba())
 end
 
 function node.render()
